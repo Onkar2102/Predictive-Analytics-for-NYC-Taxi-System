@@ -32,6 +32,15 @@ This project provides comprehensive predictive analytics for the New York City t
 │   ├── Fare_Prediction.ipynb     # Fare prediction models
 │   ├── Feature Engineering.ipynb  # Feature engineering pipeline
 │   └── *.pbix                     # Power BI visualization files
+├── dashboard/                    # Static dashboard artifacts (Power BI)
+│   ├── NYC_Taxi_System_Visualisation.pdf  # Exported multi-page dashboard
+│   └── screenshots/              # PNG exports of each dashboard page
+│       ├── page1-executive-overview.png
+│       ├── page2-revenue-distance.png
+│       ├── page3-daily-revenue.png
+│       ├── page4-day-of-week-earnings.png
+│       ├── page5-key-influencers.png
+│       └── page6-descriptive-analysis.png
 ├── Flask/                         # Web application
 │   ├── taxi_server.py            # Flask server
 │   ├── templates/                # HTML templates
