@@ -23,34 +23,53 @@ This project provides comprehensive predictive analytics for the New York City t
 - **Data Storage**: CSV files, Pickle models
 - **Development**: Jupyter Notebooks
 
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[Raw TLC Trip Data (CSV / Parquet)] -->|ETL & Cleaning| B[Data Engineering (Pandas • PySpark)]
+    B --> C[Feature Store (feature_model.csv, engineered datasets)]
+    C --> D[ML Training (Jupyter Notebooks)]
+    D --> E[Serialized Models (.pkl)]
+    E --> F[Flask Prediction API]
+    F --> G[Web UI (templates/ static/)]
+    C --> H[Power BI Dashboard (NYC_Taxi_System_Visualisation.pbix)]
+    H --> I[PDF & PNG exports (dashboard/)]
+```
+
+1. **Data Layer** – Raw trip, zone-lookup and weather files are cleaned & joined inside `Main/` notebooks (PySpark for scale).
+2. **Feature Layer** – Engineered datasets plus a lightweight `feature_model.csv` drive both ML and BI artefacts.
+3. **ML Layer** – Notebooks train Random Forest / XGBoost; models are saved as Pickle binaries and loaded by Flask.
+4. **Service Layer** – `Flask/taxi_server.py` serves real-time fare predictions; static assets live under `Flask/static/`.
+5. **Presentation Layer** – Power BI file renders business dashboards; screenshots + PDF live in `dashboard/` for GitHub viewing.
+
+---
+
 ## 📊 Project Structure
 
 ```
-├── Main/                           # Core analysis and model development
-│   ├── attempts/                   # Experimental notebooks
-│   ├── B2_56809_Onkar.ipynb      # Main analysis notebook
-│   ├── Fare_Prediction.ipynb     # Fare prediction models
-│   ├── Feature Engineering.ipynb  # Feature engineering pipeline
-│   └── *.pbix                     # Power BI visualization files
-├── dashboard/                    # Static dashboard artifacts (Power BI)
-│   ├── NYC_Taxi_System_Visualisation.pdf  # Exported multi-page dashboard
-│   └── screenshots/              # PNG exports of each dashboard page
+├── Main/                          # Data engineering & modelling
+│   ├── *.ipynb                   # Notebooks (feature engineering, training)
+│   ├── feature_model.csv         # Feature store snapshot
+│   └── *.pbix                    # Local copies of BI visuals (optional)
+├── Flask/                         # Prediction micro-service
+│   ├── taxi_server.py            # Flask API
+│   ├── templates/                # HTML templates
+│   └── static/                   # CSS, JS, images, model .pkl files
+├── dashboard/                    # Power BI exports & screenshots
+│   ├── NYC_Taxi_System_Visualisation.pdf
+│   └── screenshots/
 │       ├── page1-executive-overview.png
 │       ├── page2-revenue-distance.png
 │       ├── page3-daily-revenue.png
 │       ├── page4-day-of-week-earnings.png
-│       ├── page5-key-influencers.png
-│       └── page6-descriptive-analysis.png
-├── Flask/                         # Web application
-│   ├── taxi_server.py            # Flask server
-│   ├── templates/                # HTML templates
-│   ├── static/                   # CSS, images, assets
-│   └── *.pkl                     # Trained models
-├── Data (zones)/                  # Geographic data
-│   └── taxi_zones.csv            # NYC taxi zones dataset
-└── Documentation/                 # Reports and presentations
-    ├── 56809_report.docx         # Technical report
-    └── Business Insights.pptx    # Business presentation
+│       ├── page5-descriptive-analysis.png
+│       └── page6-key-influencers.png
+├── Data ( zones )/               # Geo lookup tables
+│   └── taxi_zones.csv
+├── images/                       # Misc project images / diagrams
+├── requirements.txt              # Python dependencies
+└── README.md                     # Project documentation
 ```
 
 ## 🚀 Getting Started

@@ -7,7 +7,7 @@ This report presents a comprehensive analysis of the NYC Taxi System through an 
 ## 🚖 Dashboard Pages and Analysis
 
 ### Page 1: Executive Overview (NYC Taxi System Insights)
-![Executive Overview Dashboard](dashboard/screenshots/page1-executive-overview.png)
+![Executive Overview Dashboard](screenshots/page1-executive-overview.png)
 
 **Purpose**
 A one-glance briefing for executives on the scale, revenue generation, and spatial-temporal patterns of NYC yellow-cab operations.
@@ -37,7 +37,7 @@ A one-glance briefing for executives on the scale, revenue generation, and spati
 ---
 
 ### Page 2: Revenue & Distance Analysis
-![Revenue & Distance Analysis Dashboard](dashboard/screenshots/page2-revenue-distance.png)
+![Revenue & Distance Analysis Dashboard](screenshots/page2-revenue-distance.png)
 
 **Purpose**
 Uncovers how mileage drives fare revenue, pin-points the neighbourhoods that earn the most, and quantifies the effect of special operating conditions.
@@ -59,7 +59,7 @@ Uncovers how mileage drives fare revenue, pin-points the neighbourhoods that ear
 ---
 
 ### Page 3: Daily Earnings Drill-Down
-![Daily Earnings Dashboard](dashboard/screenshots/page3-daily-revenue.png)
+![Daily Earnings Dashboard](screenshots/page3-daily-revenue.png)
 
 **Purpose**
 Lets analysts zoom from monthly roll-ups down to day-level behaviour, revealing intra-month peaks, forecasted trends, and any special-condition spikes.
@@ -79,7 +79,7 @@ Lets analysts zoom from monthly roll-ups down to day-level behaviour, revealing 
 ---
 
 ### Page 4: Time-of-Day & Day-of-Week Patterns
-![Time-of-Day Earnings Dashboard](dashboard/screenshots/page4-day-of-week-earnings.png)
+![Time-of-Day Earnings Dashboard](screenshots/page4-day-of-week-earnings.png)
 
 **Purpose**
 Reveals when, during a typical week, each time-of-day slot is most lucrative and links those patterns to high-earning zones and special-condition workloads.
@@ -100,7 +100,7 @@ Reveals when, during a typical week, each time-of-day slot is most lucrative and
 ---
 
 ### Page 5: Descriptive Trip Trends
-![Multi-Metric Trip Trends](dashboard/screenshots/page5-descriptive-analysis.png)
+![Multi-Metric Trip Trends](screenshots/page5-descriptive-analysis.png)
 
 **Purpose**
 Puts the five core ride-level metrics on a single time-series to visualise the pandemic dip, the recovery arc and long-term behaviour of NYC taxi demand.
@@ -116,7 +116,7 @@ Puts the five core ride-level metrics on a single time-series to visualise the p
 - **Tip resilience** – The blue `tip_amount` line mirrors `total_amount`, showing riders continued tipping in proportion to fares even during downturns—reassuring for driver earnings.
 
 ### Page 6: Key Influencers – Tip Drivers
-![Key Influencers (Tip Amount)](dashboard/screenshots/page6-key-influencers.png)
+![Key Influencers (Tip Amount)](screenshots/page6-key-influencers.png)
 
 **Purpose**
 Uses Power BI’s AI-driven *Key Influencers* visual to reveal which trip attributes most strongly drive higher **`tip_amount`** (and, by extension, total revenue). This equips managers with evidence-based levers for service improvements and targeted promotions.
