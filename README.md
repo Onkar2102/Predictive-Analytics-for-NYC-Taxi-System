@@ -1,10 +1,10 @@
 # Predictive Analytics for NYC Taxi System
 
-## 🚖 Project Overview
+## Project Overview
 
 This project provides comprehensive predictive analytics for the New York City taxi system, focusing on fare prediction and business insights analysis. The system combines machine learning models with interactive web applications to deliver actionable insights for taxi operations in the post-COVID era.
 
-## 🎯 Features
+## Features
 
 - **Fare Prediction Models**: Multiple ML algorithms (Random Forest, XGBoost) for accurate fare estimation
 - **Interactive Web Application**: Flask-based web interface for real-time predictions
@@ -13,7 +13,7 @@ This project provides comprehensive predictive analytics for the New York City t
 - **Zone-based Analysis**: Geographic analysis using NYC taxi zones data
 - **Feature Engineering**: Advanced feature extraction and selection techniques
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend**: Python, Flask
 - **Machine Learning**: Scikit-learn, XGBoost, Pandas, NumPy
@@ -23,18 +23,18 @@ This project provides comprehensive predictive analytics for the New York City t
 - **Data Storage**: CSV files, Pickle models
 - **Development**: Jupyter Notebooks
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
-graph TD
-    A[Raw TLC Trip Data (CSV / Parquet)] -->|ETL & Cleaning| B[Data Engineering (Pandas • PySpark)]
-    B --> C[Feature Store (feature_model.csv, engineered datasets)]
-    C --> D[ML Training (Jupyter Notebooks)]
-    D --> E[Serialized Models (.pkl)]
-    E --> F[Flask Prediction API]
-    F --> G[Web UI (templates/ static/)]
-    C --> H[Power BI Dashboard (NYC_Taxi_System_Visualisation.pbix)]
-    H --> I[PDF & PNG exports (dashboard/)]
+graph TD;
+    A["Raw TLC Trip Data (CSV/Parquet)"] --> B["Data Engineering (Pandas & PySpark)"]
+    B --> C["Feature Store (feature_model.csv)"]
+    C --> D["ML Training (Jupyter Notebooks)"]
+    D --> E["Serialized Models (.pkl)"]
+    E --> F["Flask Prediction API"]
+    F --> G["Web UI (templates/static)"]
+    C --> H["Power BI Dashboard (.pbix)"]
+    H --> I["PDF & PNG Exports (dashboard/)"]
 ```
 
 1. **Data Layer** – Raw trip, zone-lookup and weather files are cleaned & joined inside `Main/` notebooks (PySpark for scale).
@@ -45,7 +45,7 @@ graph TD
 
 ---
 
-## 📊 Project Structure
+## Project Structure
 
 ```
 ├── Main/                          # Data engineering & modelling
@@ -72,7 +72,7 @@ graph TD
 └── README.md                     # Project documentation
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -116,7 +116,7 @@ graph TD
    ```
    Navigate to the `Main/` directory to explore the analysis notebooks.
 
-## 📈 Models and Performance
+## Models and Performance
 
 The project includes several machine learning models for fare prediction:
 
@@ -124,14 +124,14 @@ The project includes several machine learning models for fare prediction:
 - **XGBoost**: Gradient boosting for enhanced performance
 - **Feature Engineering**: Distance calculations, time-based features, zone mappings
 
-## 🌐 Web Application Features
+## Web Application Features
 
 - **Fare Prediction**: Real-time fare estimation based on pickup/dropoff locations
 - **Business Insights**: Interactive dashboards showing taxi system trends
 - **Zone Analysis**: Geographic visualization of taxi zones and patterns
 - **Cost Calculator**: Simple fare calculation tool
 
-## 📊 Business Insights
+## Business Insights
 
 The project provides comprehensive business intelligence including:
 
@@ -140,7 +140,7 @@ The project provides comprehensive business intelligence including:
 - Geographic hotspots identification
 - Revenue optimization strategies
 
-## 🔧 Development
+## Development
 
 ### Running Development Server
 ```bash
@@ -158,17 +158,8 @@ Models are pre-trained and saved as `.pkl` files in the Flask directory. To retr
 1. Run the notebooks in `Main/` directory
 2. Models will be automatically saved for use in the web application
 
-## 📝 Documentation
+## Documentation
 
 - **Technical Report**: `56809_report.docx` - Detailed technical documentation
 - **Business Presentation**: `Business Insights on Post-COVID Taxi System.pptx`
 - **Process Flow**: `Process Flow Diagram.pdf` - System architecture overview
-
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-*This project demonstrates the power of data analytics in understanding and optimizing urban transportation systems.*
